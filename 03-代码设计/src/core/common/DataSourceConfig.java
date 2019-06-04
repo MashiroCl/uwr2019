@@ -41,6 +41,7 @@ public class DataSourceConfig implements DataSourceType {
 	}
 	//there should be only one ConstDataSource instance
 	//so this method will return the first DataSource which is of ConstDataSource
+
 	public ConstDataSource getConstDataSource() {
 		if (dataSources==null) return null;
 		for(int i=0; i<dataSources.size(); i++) {
@@ -50,6 +51,7 @@ public class DataSourceConfig implements DataSourceType {
 		}
 		return null;
 	}
+
 	//get desired datasource by name
 	public DataSource getDataSource(String name) {
 		if (name == null || "".equals(name)) return getConstDataSource();
